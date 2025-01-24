@@ -17,15 +17,20 @@ class MyApp extends StatelessWidget {
         backgroundColor: Colors.green,
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center, // 왼쪽 정렬
         children: [
           Text(
-            '안냐세요 티니핑~',
-            style: TextStyle(fontSize: 24, color: Colors.blue),
+            '큰 텍스트',
+            style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
           ),
           Text(
-            '잘가세요 하츄핑~',
-            style: TextStyle(fontSize: 20, color: Colors.grey),
+            '중간 크기 텍스트',
+            style: TextStyle(fontSize: 20, color: Colors.blue),
+          ),
+          Text(
+            '작은 텍스트',
+            style: TextStyle(fontSize: 16, fontStyle: FontStyle.italic),
           ),
         ],
       ),
