@@ -10,30 +10,24 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        home: Scaffold(
-      appBar: AppBar(
-        title: Text('flutter Text 연습'),
-        centerTitle: true, // 중앙 정렬
-        backgroundColor: Colors.green,
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('기본 텍스트 연습'),
+        ),
+        body: const Center(
+          child: Text(
+            '포켓몬스터',
+            style: TextStyle(
+              fontSize: 24, // 글자 크기
+              color: Colors.red, // 글자 색상
+              fontWeight: FontWeight.bold, // 굵기 (보통)
+              fontStyle: FontStyle.italic, // 기울임 없음
+              decoration: TextDecoration.lineThrough, // 장식 없음
+            ),
+          ),
+        ),
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.center, // 왼쪽 정렬
-        children: [
-          Text(
-            '큰 텍스트',
-            style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold),
-          ),
-          Text(
-            '중간 크기 텍스트',
-            style: TextStyle(fontSize: 20, color: Colors.blue),
-          ),
-          Text(
-            '작은 텍스트',
-            style: TextStyle(fontSize: 16, fontStyle: FontStyle.italic),
-          ),
-        ],
-      ),
-    ));
+    );
   }
+
 }
