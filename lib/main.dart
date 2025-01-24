@@ -5,7 +5,6 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-
   const MyApp({super.key}); // 부모 클래스의 Key를 전달받아 위젯 트리에 전달.
 
   @override
@@ -14,12 +13,21 @@ class MyApp extends StatelessWidget {
         home: Scaffold(
       appBar: AppBar(
         title: Text('flutter Text 연습'),
+        centerTitle: true, // 중앙 정렬
+        backgroundColor: Colors.green,
       ),
-      body: Center(
-        child: Text(
-          '안냐세요 티니핑~',
-          style: TextStyle(fontSize: 24, color: Colors.blue),
-        ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Text(
+            '안냐세요 티니핑~',
+            style: TextStyle(fontSize: 24, color: Colors.blue),
+          ),
+          Text(
+            '잘가세요 하츄핑~',
+            style: TextStyle(fontSize: 20, color: Colors.grey),
+          ),
+        ],
       ),
     ));
   }
